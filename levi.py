@@ -1,3 +1,6 @@
+#Credits :- @EminenceCurse and @ishikki_Akabane
+
+
 from pyrogram import Client, filters, idle
 import requests
 import random
