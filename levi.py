@@ -17,7 +17,7 @@ This is a basic bot to react on your messages.
 Use /react while replying on someone's message.**
 """
 
-@Bot.on_message(filters.command('start'))
+@app.on_message(filters.command('start'))
 async def start_cmd(client, message):
     await message.reply(START_MSG.format(message.from_user.mention))
 
