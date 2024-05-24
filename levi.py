@@ -2,10 +2,10 @@ from pyrogram import Client, filters, idle
 import requests
 import random
 
-api_id =  
-api_hash = '' 
+api_id =  29422639
+api_hash = 'e21bccfd64a01c5762ce81c77379dc7f' 
 
-token = '' #--Enter Bot Token Here.
+token = '6368969091:AAF-gE8KSbodGuCYIzIvHWYWk0LXjW98pvw' #--Enter Bot Token Here.
 
 emojis = ["👍"]
 
