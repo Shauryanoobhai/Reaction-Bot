@@ -4,11 +4,22 @@
 from pyrogram import Client, filters, idle
 import requests
 import random
-
+import asyncio
 api_id =  29422639
 api_hash = 'e21bccfd64a01c5762ce81c77379dc7f' 
 
 token = '6368969091:AAF-gE8KSbodGuCYIzIvHWYWk0LXjW98pvw' #--Enter Bot Token Here.
+
+
+START_MSG = """
+**Hyy{},
+This is a basic bot to react on your messages. 
+Use /react while replying on someone's message.**
+"""
+
+@Bot.on_message(filters.command('start'))
+async def start_cmd(client, message):
+    await message.reply(START_MSG.format(message.from_user.mention))
 
 emojis = ["👍", "👎", "❤️", "🔥", "🥰", "👏", "😁", "🤔", "🤯", "😱", "🤬", "😢", "🎉", "🤩", "🤮", "💩", "🙏", "👌", "🕊", "🤡", "🥱", "🥴", "😍", "🐳", "❤️‍🔥", "🌚", "🌭", "💯", "🤣", "⚡️", "🍌", "🏆", "💔", "🤨", "😐", "🍓", "🍾", "💋", "🖕", "😈", "😴", "😭", "🤓", "👻", "👨‍💻", "👀", "🎃", "🙈", "😇", "😨", "🤝", "✍️", "🤗", "🫡", "🎅", "🎄", "☃️", "💅", "🤪", "🗿", "🆒", "💘", "🙉", "🦄", "😘", "💊", "🙊", "😎", "👾", "🤷‍♂️", "🤷", "🤷‍♀️", "😡"]
 
