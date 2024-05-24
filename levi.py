@@ -10,6 +10,7 @@ api_hash = 'e21bccfd64a01c5762ce81c77379dc7f'
 
 token = '6368969091:AAF-gE8KSbodGuCYIzIvHWYWk0LXjW98pvw' #--Enter Bot Token Here.
 
+app = Client("my_bot", api_id=api_id, api_hash=api_hash, bot_token=token)
 
 START_MSG = """
 **Hyy{},
