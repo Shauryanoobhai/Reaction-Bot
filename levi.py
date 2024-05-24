@@ -3,7 +3,10 @@
 
 
 
+
 from pyrogram import Client, filters, idle
+import requests
+import random
 
 api_id = 29422639
 api_hash = 'e21bccfd64a01c5762ce81c77379dc7f' 
@@ -34,7 +37,7 @@ async def react_to_message(client, message):
 
     random_emoji = random.choice(emojis)
 
-    url = f'https://api.telegram.org/bot{token}/setMessageReaction'
+    url = f'https://api.telegram.org/bot{token}/setReaction'
 
 
     params = {
