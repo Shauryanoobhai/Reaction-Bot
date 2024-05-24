@@ -1,11 +1,9 @@
 #Credits :- @EminenceCurse and @ishikki_Akabane
 
 
+
 from pyrogram import Client, filters, idle
-from pyrogram import Client as app
-import requests
-import random
-import asyncio
+
 api_id =  29422639
 api_hash = 'e21bccfd64a01c5762ce81c77379dc7f' 
 
@@ -25,20 +23,20 @@ async def start_cmd(client, message):
 
 emojis = ["👍", "👎", "❤️", "🔥", "🥰", "👏", "😁", "🤔", "🤯", "😱", "🤬", "😢", "🎉", "🤩", "🤮", "💩", "🙏", "👌", "🕊", "🤡", "🥱", "🥴", "😍", "🐳", "❤️‍🔥", "🌚", "🌭", "💯", "🤣", "⚡️", "🍌", "🏆", "💔", "🤨", "😐", "🍓", "🍾", "💋", "🖕", "😈", "😴", "😭", "🤓", "👻", "👨‍💻", "👀", "🎃", "🙈", "😇", "😨", "🤝", "✍️", "🤗", "🫡", "🎅", "🎄", "☃️", "💅", "🤪", "🗿", "🆒", "💘", "🙉", "🦄", "😘", "💊", "🙊", "😎", "👾", "🤷‍♂️", "🤷", "🤷‍♀️", "😡"]
 
-app = Client("my_bot", api_id=api_id, api_hash=api_hash, bot_token=token)
+bot = Client("my_bot", api_id=api_id, api_hash=api_hash, bot_token=token)
 
-@app.on_message(filters.command("react"))
+@bot.on_message(filters.command("react"))
 async def react_to_message(client, message):
     reply = message.reply_to_message
     chat_id = reply.chat.id
     message_id = reply.id
-    
-   
+
+
     random_emoji = random.choice(emojis)
-    
+
     url = f'https://api.telegram.org/bot{token}/setMessageReaction'
 
-  
+
     params = {
         'chat_id': chat_id,
         'message_id': message_id,
@@ -58,6 +56,6 @@ async def react_to_message(client, message):
         print("Response content:", response.content)
 
 print("starting...")
-app.start()
+bot.start()
 
 idle()
