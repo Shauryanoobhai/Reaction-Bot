@@ -2,6 +2,7 @@
 
 
 from pyrogram import Client, filters, idle
+from pyrogram import Client as app
 import requests
 import random
 import asyncio
@@ -10,7 +11,7 @@ api_hash = 'e21bccfd64a01c5762ce81c77379dc7f'
 
 token = '6368969091:AAF-gE8KSbodGuCYIzIvHWYWk0LXjW98pvw' #--Enter Bot Token Here.
 
-app = Client("my_bot")
+
 
 START_MSG = """
 **Hyy{},
