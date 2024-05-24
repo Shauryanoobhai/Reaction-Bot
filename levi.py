@@ -9,9 +9,9 @@ token = '6368969091:AAF-gE8KSbodGuCYIzIvHWYWk0LXjW98pvw' #--Enter Bot Token Here
 
 emojis = ["👍"]
 
-app = Client("Lawda", api_id=api_id, api_hash=api_hash, bot_token=token)
+app = Client("my_bot", api_id=api_id, api_hash=api_hash, bot_token=token)
 
-@Lawda.on_message(filters.command("react"))
+@app.on_message(filters.command("react"))
 async def react_to_message(client, message):
     reply = message.reply_to_message
     chat_id = reply.chat.id
